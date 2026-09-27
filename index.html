@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Creator Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Media Generator Studio</h1>
+            <p>আপনার পছন্দের প্রম্পট লিখে এক ক্লিকেই তৈরি করুন 4K ভিডিও, ছবি এবং গান!</p>
+        </header>
+
+        <main>
+            <div class="card">
+                <div class="input-group">
+                    <label for="mediaType">মিডিয়া টাইপ সিলেক্ট করুন:</label>
+                    <select id="mediaType">
+                        <option value="video">🎬 4K Video</option>
+                        <option value="photo">🖼️ 4K Photo</option>
+                        <option value="song">🎵 Song / Audio</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="promptInput">আপনার প্রম্পট লিখুন:</label>
+                    <textarea id="promptInput" placeholder="যেমন: A futuristic cyberpunk city at night, 4k..."></textarea>
+                </div>
+
+                <button id="generateBtn" onclick="generateMedia()">জেনারেট করুন (Generate)</button>
+            </div>
+
+            <div id="outputSection" class="output-card hidden">
+                <h3>আউটপুট প্রিভিউ:</h3>
+                <div id="resultBox">
+                    <p id="loadingText" class="hidden">এআই আপনার কন্টেন্ট তৈরি করছে, অনুগ্রহ করে অপেক্ষা করুন...</p>
+                    <div id="mediaResult"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
